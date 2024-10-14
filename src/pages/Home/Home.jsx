@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import svg1 from "/svg1.svg";
 import svg3 from "/svg3.svg";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+  Image,
+} from "@nextui-org/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import Mobile from "../../components/Carousel/TeamPoor/TPModalMobile";
 
 // CSS for floating animation
 const styles = {
@@ -11,15 +25,17 @@ const styles = {
 };
 
 const Home = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
-    <div className=" bg-zinc-950 text-white">
+    <div className="relative bg-zinc-950 text-white overflow-hidden">
       {/* Left Circle */}
       <div className="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
       {/* Right Circle */}
-      <div className="absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-[500px] right-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
-      <div className=" min-h-screen overflow-hidden flex flex-col">
+      <div className="min-h-screen overflow-hidden flex flex-col">
         {/* Star Circles */}
         {Array.from({ length: 50 }).map((_, index) => (
           <div
@@ -147,8 +163,187 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-4 px-80 font-montserrat">
-          <div></div>
+          {/* scheduler */}
+          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+            <img src="/images/proj-b2.jpg" />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Website</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">MongoDB</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Express</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">React JS</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">TUPT-T Scheduler</p>
+
+                <p className="font-light text-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* blessed land */}
+          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+            <img src="/images/proj-a1.png" />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Website</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">MongoDB</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Express</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">React JS</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">Blessed Land Academy of Taguig</p>
+
+                <p className="font-light text-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* web teampoor */}
+          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+            <img src="/images/proj-c1.png" />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Website</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">MongoDB</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Express</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">React JS</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">
+                  TEAMPOOR - Motorcycle Parts & Services
+                </p>
+
+                <p className="font-light text-xs">
+                  TeamPoor System for Managing Motorcycle Parts and Services, a
+                  sophisticated web-based and mobile application designed to
+                  transform the management of motorcycle shops. The system aims
+                  to enhance workflow efficiency, minimize manual processes,
+                  boost productivity, and elevate service delivery and customer
+                  satisfaction within the motorcycle shop environment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* web teampoor */}
+          <a
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300"
+            onClick={onOpen}
+          >
+            {/* <img src="/images/proj-d1.png" /> */}
+
+            <Image
+              width="100%"
+              src="/images/proj-d1.png"
+              className="w-full rounded-none"
+            />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Mobile</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">MongoDB</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Express</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">React JS</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">
+                  TEAMPOOR - Motorcycle Parts & Services
+                </p>
+
+                <p className="font-light text-xs">
+                  TeamPoor System for Managing Motorcycle Parts and Services, a
+                  sophisticated web-based and mobile application designed to
+                  transform the management of motorcycle shops. The system aims
+                  to enhance workflow efficiency, minimize manual processes,
+                  boost productivity, and elevate service delivery and customer
+                  satisfaction within the motorcycle shop environment.
+                </p>
+
+                <Mobile isOpen={isOpen} onOpenChange={onOpenChange} />
+              </div>
+            </div>
+          </a>
         </div>
+
+        <div className="mt-2"></div>
       </div>
     </div>
   );
