@@ -58,17 +58,17 @@ const Home = () => {
 
         {/* Main Content */}
         <div className="flex flex-1 justify-center items-center w-full">
-          <div className="flex flex-row justify-center px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
-            <div className="w-3/6 flex justify-start items-center font-montserrat">
-              <div className="flex flex-col gap-4">
+          <div className="flex flex-col xl:flex-row gap-10 xl:gap-4 justify-center px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+            <div className="xl:w-3/6 flex justify-center text-center xl:text-start xl:justify-start items-center font-montserrat">
+              <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start gap-4">
                 <p className="text-6xl font-bold">
                   Secure IT Solutions for a more secure environment
                 </p>
 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida
+                <p className="text-zinc-300">
+                  Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat
+                  congue at porta auctor mollis aliquam dolor. Dui finibus
+                  dapibus curae nisl tellus dapibus donec vestibulum.
                 </p>
 
                 <div className="px-12 py-4 w-fit rounded bg-white mt-4 shadow-lg shadow-white">
@@ -77,7 +77,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="w-3/6 flex justify-center ">
+            <div className="xl:w-3/6 flex justify-center ">
               <img
                 src={svg3}
                 width={600}
@@ -399,7 +399,7 @@ const Home = () => {
 
         </div> */}
 
-        <div className="grid grid-cols-4 gap-4 font-montserrat">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 font-montserrat">
           <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
             <img src="/images/teams/reigne.jpg" className="rounded-full" />
 
