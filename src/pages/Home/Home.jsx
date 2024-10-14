@@ -148,6 +148,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* projects */}
       <div className="flex flex-col gap-8 mt-40 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
         <div className="flex flex-row">
           <div className="flex flex-col gap-2 font-montserrat">
@@ -342,9 +343,103 @@ const Home = () => {
             </div>
           </a>
         </div>
-
-        <div className="mt-2"></div>
       </div>
+
+      {/* teams */}
+      <div className="flex flex-col gap-8 mt-32 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+        <div className="flex flex-row">
+          <div className="flex flex-col gap-2 font-montserrat">
+            <p className="font-bold">● TEAMS ●</p>
+
+            <p className="font-extrabold text-4xl">Our Teams</p>
+
+            <p className="font-light">
+              These people work on making our project best.
+            </p>
+          </div>
+        </div>
+
+        {/* <div className="grid grid-cols-4 gap-4 font-montserrat">
+          <div className="bg-zinc-900 rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+            <img src="/images/teams/reigne.jpg" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">ELIJA REIGNE MONTERONA</p>
+
+              <p className="text-sm">Mobile Developer</p>
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+            <img src="/images/teams/frans.jpg" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">FRANS ADRYHEL MANLANGIT</p>
+
+              <p className="text-sm">Mobile Developer</p>
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+            <img src="/images/teams/daniel.jpg" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">DANIEL ANGELO RODRIGUEZ</p>
+
+              <p className="text-sm">Website Developer</p>
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+            <img src="/images/teams/novemger.jpg" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">NOVEMGER PASCUA</p>
+
+              <p className="text-sm">Website Developer</p>
+            </div>
+          </div>
+
+        </div> */}
+
+        <div className="grid grid-cols-4 gap-4 font-montserrat">
+          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+            <img src="/images/teams/reigne.jpg" className="rounded-full" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">ELIJA REIGNE MONTERONA</p>
+
+              <p className="text-sm text-zinc-500">Mobile Developer</p>
+            </div>
+          </div>
+          <div className="rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+            <img src="/images/teams/frans.jpg" className="rounded-full" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">FRANS ADRYHEL MANLANGIT</p>
+
+              <p className="text-sm text-zinc-500">Mobile Developer</p>
+            </div>
+          </div>
+          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+            <img src="/images/teams/daniel.jpg" className="rounded-full" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">DANIEL ANGELO RODRIGUEZ</p>
+
+              <p className="text-sm text-zinc-500">Website Developer</p>
+            </div>
+          </div>
+          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+            <img src="/images/teams/novemger.jpg" className="rounded-full" />
+
+            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+              <p className="font-bold">NOVEMGER PASCUA</p>
+
+              <p className="text-sm text-zinc-500">Website Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6"></div>
     </div>
   );
 };
