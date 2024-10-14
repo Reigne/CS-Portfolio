@@ -59,15 +59,15 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row justify-center items-center gap-8 w-4/12">
-          <div className="font-montserrat relative group">
+          <div className="font-montserrat relative group cursor-pointer">
             Home
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
-          <div className="font-montserrat relative group">
+          <div className="font-montserrat relative group cursor-pointer">
             About
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
-          <div className="font-montserrat relative group">
+          <div className="font-montserrat relative group cursor-pointer">
             Contact
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
