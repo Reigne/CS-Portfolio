@@ -44,7 +44,7 @@ const Navbar = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className=" text-white px-80">
+    <div className=" text-white px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
       <div className="flex flex-row justify-between items-center py-5">
         <div className="flex flex-row justify-start items-center gap-4 w-4/12">
           <img

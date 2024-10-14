@@ -58,7 +58,7 @@ const Home = () => {
 
         {/* Main Content */}
         <div className="flex flex-1 justify-center items-center w-full">
-          <div className="flex flex-row justify-center px-80">
+          <div className="flex flex-row justify-center px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
             <div className="w-3/6 flex justify-start items-center font-montserrat">
               <div className="flex flex-col gap-4">
                 <p className="text-6xl font-bold">
@@ -107,8 +107,8 @@ const Home = () => {
       </div>
 
       {/* services */}
-      <div className="flex flex-col gap-12">
-        <div className="flex flex-row px-80">
+      <div className="flex flex-col gap-12 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+        <div className="flex flex-row ">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● SERVICES ●</p>
 
@@ -121,7 +121,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-8 px-80 font-montserrat">
+        <div className="flex flex-row gap-8 font-montserrat">
           {/* Web Development Card */}
           <div className="flex flex-col gap-4 p-8 border border-zinc-700 hover:border-white rounded-xl w-1/2 transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
             <img src="/images/computer.png" width={50} />
@@ -148,8 +148,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 mt-40">
-        <div className="flex flex-row px-80">
+      <div className="flex flex-col gap-8 mt-40 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+        <div className="flex flex-row">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● PORTFOLIO ●</p>
 
@@ -162,7 +162,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 px-80 font-montserrat">
+        <div className="grid grid-cols-3 gap-4  font-montserrat">
           {/* scheduler */}
           <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
             <img src="/images/proj-b2.jpg" />
@@ -289,7 +289,7 @@ const Home = () => {
 
           {/* web teampoor */}
           <a
-            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300"
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={onOpen}
           >
             {/* <img src="/images/proj-d1.png" /> */}
