@@ -64,11 +64,15 @@ const Navbar = () => {
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
           <div className="font-montserrat relative group cursor-pointer">
-            About
+            Services
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
           <div className="font-montserrat relative group cursor-pointer">
-            Contact
+            Portfolio
+            <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </div>
+          <div className="font-montserrat relative group cursor-pointer">
+            Our Team
             <span className="rounded block absolute left-1/2 bottom-0 h-0.5 bg-white w-full transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </div>
         </div>
