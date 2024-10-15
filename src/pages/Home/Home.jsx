@@ -53,12 +53,12 @@ const Home = () => {
   } = useDisclosure();
 
   return (
-    <div className="relative bg-zinc-950 text-white overflow-hidden">
+    <div className="relative bg-zinc-950 text-white overflow-hidden p-4 sm:p-18 md:p-8 lg:p-12">
       {/* Left Circle */}
       <div className="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
       {/* Right Circle */}
-      <div className="absolute bottom-[500px] right-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
+      <div className="absolute top-[600px] right-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
       <div id="home" className="min-h-screen overflow-hidden flex flex-col">
         {/* Star Circles */}
@@ -87,13 +87,15 @@ const Home = () => {
             <div className="xl:w-3/6 flex justify-center text-center xl:text-start xl:justify-start items-center font-montserrat">
               <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start gap-4">
                 <p className="text-6xl font-bold">
-                  Secure IT Solutions for a more secure environment
+                  Elevate Your Vision with App Development!
                 </p>
 
                 <p className="text-zinc-300">
-                  Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat
-                  congue at porta auctor mollis aliquam dolor. Dui finibus
-                  dapibus curae nisl tellus dapibus donec vestibulum.
+                  We offer comprehensive web and mobile application development
+                  services that are specifically designed to cater to the
+                  diverse needs of everyone, ensuring that our solutions are
+                  both accessible and user-friendly for all individuals and
+                  businesses.
                 </p>
 
                 <a
@@ -141,41 +143,63 @@ const Home = () => {
         id="services"
         className="flex flex-col gap-12 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48"
       >
-        <div className="flex flex-row ">
+        <div className="flex flex-row">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● SERVICES ●</p>
 
             <p className="font-extrabold text-4xl">Services We Offer</p>
 
             <p className="font-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Discover a range of tailored solutions designed to meet your
+              unique needs. From web and mobile development to digital marketing
+              and consulting, our expert team is dedicated to delivering
+              exceptional results that drive growth and success for your
+              business.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-row gap-8 font-montserrat">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  gap-8 font-montserrat">
           {/* Web Development Card */}
-          <div className="flex flex-col gap-4 p-8 border border-zinc-700 hover:border-white rounded-xl w-1/2 transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
+          <div className="flex flex-col gap-4 p-8 border border-zinc-700 hover:border-white rounded-xl  transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
             <img src="/images/computer.png" width={50} />
             <p className="font-bold text-2xl text-white">Web Development</p>
             <p className="font-light text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              At Capstone Solutions, we specialize in creating dynamic and
+              responsive websites tailored to meet your unique business needs.
+              Our team of skilled developers combines creativity with technical
+              expertise to deliver high-quality web solutions that drive
+              engagement and conversions.
+            </p>
+
+            <p className="font-light text-white">
+              From e-commerce platforms to informative blogs, we offer
+              end-to-end development services, including custom website design,
+              content management systems, and seamless integrations with
+              third-party applications. Our commitment to user experience
+              ensures that every site we create is intuitive, mobile-friendly,
+              and optimized for search engines.
             </p>
           </div>
 
           {/* Mobile Development Card */}
-          <div className="flex flex-col gap-2 p-8 border border-zinc-700 hover:border-white rounded-xl w-1/2 transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
+          <div className="flex flex-col gap-2 p-8 border border-zinc-700 hover:border-white rounded-xl  transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
             <img src="/images/phone.png" width={50} />
             <p className="font-bold text-2xl text-white">Mobile Development</p>
             <p className="font-light text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              At Capstone Solutions, we offer cutting-edge mobile development
+              services that empower your business to thrive in the digital
+              landscape. Our team of experienced developers specializes in
+              creating intuitive, high-performance mobile applications for
+              Android platforms.
+            </p>
+
+            <p className="font-light text-white">
+              We focus on user-centered design, ensuring that every app we
+              develop provides an engaging and seamless experience for your
+              users. Whether you need a native app or a cross-platform solution,
+              we tailor our approach to meet your specific goals and
+              requirements.
             </p>
           </div>
         </div>
@@ -190,11 +214,14 @@ const Home = () => {
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● PORTFOLIO ●</p>
 
-            <p className="font-extrabold text-4xl">Our Finish Work</p>
+            <p className="font-extrabold text-4xl">Our Projects</p>
 
             <p className="font-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Explore our diverse portfolio showcasing innovative projects that
+              highlight our expertise and commitment to quality. From dynamic
+              websites to robust mobile applications, each project reflects our
+              dedication to delivering impactful solutions that meet our
+              clients' unique needs and drive their success.
             </p>
           </div>
         </div>
@@ -234,10 +261,12 @@ const Home = () => {
                 <p className="font-bold">TUPT-T Scheduler</p>
 
                 <p className="font-light text-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  The TUP-T Sports and eSports Scheduler is a dynamic platform
+                  designed to streamline the organization and management of
+                  sports and esports events for students and teams. With an
+                  intuitive interface, it allows users to easily create, update,
+                  and manage schedules for various activities, including
+                  tournaments, practices, and matches.
                 </p>
 
                 <TUPTSchedulerModal
@@ -282,10 +311,12 @@ const Home = () => {
                 <p className="font-bold">Blessed Land Academy of Taguig</p>
 
                 <p className="font-light text-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  The Blessed Land Academy of Taguig web system is a dynamic
+                  online platform designed to enhance communication and
+                  streamline operations for students, parents, and staff. This
+                  comprehensive system features user-friendly interfaces for
+                  enrollment, class schedules, and academic resources, enabling
+                  easy access to vital information.
                 </p>
 
                 <BlessedLandModal
@@ -417,7 +448,7 @@ const Home = () => {
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● TEAMS ●</p>
 
-            <p className="font-extrabold text-4xl">Our Teams</p>
+            <p className="font-extrabold text-4xl">Our Team</p>
 
             <p className="font-light">
               These people work on making our project best.
