@@ -75,20 +75,24 @@ const Navbar = () => {
 
         {/* Desktop Navigation (hidden on small screens) */}
         <div className="hidden sm:flex flex-row justify-center items-center gap-8 w-4/12">
-          {["#home", "#services", "#portfolio", "#ourteam"].map((section) => (
+          {[
+            { href: "#home", name: "Home" },
+            { href: "#services", name: "Services" },
+            { href: "#portfolio", name: "Portfolio" },
+            { href: "#ourteam", name: "Our Team" } // Use "Our Team" directly
+          ].map(({ href, name }) => (
             <a
-              key={section}
-              href={section}
+              key={href}
+              href={href}
               className={`font-montserrat relative group cursor-pointer ${getLinkClass(
-                section
+                href
               )}`}
             >
-              {section.replace("#", "").charAt(0).toUpperCase() + section.slice(2)}
+              {name}
               <span
                 className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100 ${getUnderlineClass(
-                  [section]
-                )}`}
-              ></span>
+                  [href]
+                )}`}></span>
             </a>
           ))}
         </div>
@@ -123,14 +127,19 @@ const Navbar = () => {
             Close
           </button>
           <div className="flex flex-col gap-8">
-            {["#home", "#services", "#portfolio", "#ourteam"].map((section) => (
+            {[
+              { href: "#home", name: "Home" },
+              { href: "#services", name: "Services" },
+              { href: "#portfolio", name: "Portfolio" },
+              { href: "#ourteam", name: "Our Team" } // Use "Our Team" directly
+            ].map(({ href, name }) => (
               <a
-                key={section}
-                href={section}
+                key={href}
+                href={href}
                 onClick={toggleMenu} // Close menu on link click
-                className={`font-montserrat text-2xl text-white ${getLinkClass(section)}`}
+                className={`font-montserrat text-2xl text-white ${getLinkClass(href)}`}
               >
-                {section.replace("#", "").charAt(0).toUpperCase() + section.slice(2)}
+                {name}
               </a>
             ))}
           </div>
