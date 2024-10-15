@@ -71,9 +71,14 @@ const Home = () => {
                   dapibus curae nisl tellus dapibus donec vestibulum.
                 </p>
 
-                <div className="px-12 py-4 w-fit rounded bg-white mt-4 shadow-lg shadow-white">
+                <a
+                  className="px-12 py-4 w-fit rounded bg-white mt-4 shadow-lg shadow-white hover:scale-105 transition-transform duration-300"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=capstone.solutions24@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <p className="text-black font-bold text-lg">Email Us</p>
-                </div>
+                </a>
               </div>
             </div>
 
