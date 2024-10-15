@@ -21,6 +21,7 @@ import TUPTSchedulerModal from "../../components/Carousel/TUPT-TScheduler/TUPTSc
 import TPModalWebsite from "../../components/Carousel/TeamPoor/TPModalWebsite";
 import TUPTSchedulerModalMobile from "../../components/Carousel/TUPT-TScheduler/TUPTSchedulerModalMobile";
 import BlessedLandModalMobile from "../../components/Carousel/BlessedLandAcademyOfTaguig/BlessedLandModalMobile";
+import { FaGithub } from "react-icons/fa";
 
 // CSS for floating animation
 const styles = {
@@ -173,7 +174,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  gap-8 font-montserrat">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 font-montserrat">
           {/* Web Development Card */}
           <div className="flex flex-col gap-4 p-8 border border-zinc-700 hover:border-white rounded-xl  transition-transform ease-in-out duration-300  transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-400">
             <img src="/images/computer.png" width={50} />
@@ -272,7 +273,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">TUPT-T Scheduler</p>
+                <p className="font-bold">TUPT-T Scheduler (Website)</p>
 
                 <p className="font-light text-xs">
                   The TUP-T Sports and eSports Scheduler is a dynamic platform
@@ -322,7 +323,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">TUPT-T Scheduler</p>
+                <p className="font-bold">TUPT-T Scheduler (Mobile App)</p>
 
                 <p className="font-light text-xs">
                   The TUP-T Sports and eSports Scheduler is a dynamic platform
@@ -372,7 +373,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">Blessed Land Academy of Taguig</p>
+                <p className="font-bold">Blessed Land Academy of Taguig (Website)</p>
 
                 <p className="font-light text-xs">
                   The Blessed Land Academy of Taguig web system is a dynamic
@@ -422,7 +423,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">Blessed Land Academy of Taguig</p>
+                <p className="font-bold">Blessed Land Academy of Taguig (Mobile App)</p>
 
                 <p className="font-light text-xs">
                   The Blessed Land Academy of Taguig web system is a dynamic
@@ -611,41 +612,70 @@ const Home = () => {
         </div> */}
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 font-montserrat">
-          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
             <img src="/images/teams/reigne.jpg" className="rounded-full" />
 
-            <div className="flex flex-col justify-center items-center p-4 space-y-1">
-              <p className="font-bold">ELIJA REIGNE MONTERONA</p>
+            <div className="flex flex-col justify-center items-center space-y-1">
+              <p className="text-md text-zinc-500">Mobile Developer</p>
 
-              <p className="text-sm text-zinc-500">Mobile Developer</p>
+              <p className="font-bold">ELIJA REIGNE MONTERONA</p>
             </div>
+
+            <a
+              href="https://github.com/Reigne"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} color="#71717a" />
+            </a>
           </div>
-          <div className="rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
             <img src="/images/teams/frans.jpg" className="rounded-full" />
 
-            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+            <div className="flex flex-col justify-center items-center space-y-1">
+              <p className="text-md text-zinc-500">Mobile Developer</p>
               <p className="font-bold">FRANS ADRYHEL MANLANGIT</p>
-
-              <p className="text-sm text-zinc-500">Mobile Developer</p>
             </div>
+
+            <a
+              href="https://github.com/FransManlangit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} color="#71717a" />
+            </a>
           </div>
-          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
             <img src="/images/teams/daniel.jpg" className="rounded-full" />
 
-            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+            <div className="flex flex-col justify-center items-center space-y-1">
+              <p className="text-md text-zinc-500">Website Developer</p>
               <p className="font-bold">DANIEL ANGELO RODRIGUEZ</p>
-
-              <p className="text-sm text-zinc-500">Website Developer</p>
             </div>
+
+            <a
+              href="https://github.com/d4Nc0D31902"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} color="#71717a" />
+            </a>
           </div>
-          <div className=" rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
             <img src="/images/teams/novemger.jpg" className="rounded-full" />
 
-            <div className="flex flex-col justify-center items-center p-4 space-y-1">
+            <div className="flex flex-col justify-center items-center  space-y-1">
+              <p className="text-md text-zinc-500">Website Developer</p>
               <p className="font-bold">NOVEMGER PASCUA</p>
-
-              <p className="text-sm text-zinc-500">Website Developer</p>
             </div>
+
+            <a
+              href="https://github.com/XdebronneX"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} color="#71717a" />
+            </a>
           </div>
         </div>
       </div>
