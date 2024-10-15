@@ -3,10 +3,12 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa6";
+import { AiOutlineMenu } from "react-icons/ai"; // Import hamburger icon
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false); // State for fullscreen menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +20,12 @@ const Navbar = () => {
     };
 
     const handleHashChange = () => {
-      setActiveSection(window.location.hash || "#home"); // Treat empty hash as #home
+      setActiveSection(window.location.hash || "#home");
     };
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("hashchange", handleHashChange);
 
-    // Set initial active section based on the current URL hash
     setActiveSection(window.location.hash || "#home");
 
     return () => {
@@ -40,6 +41,8 @@ const Navbar = () => {
   const getUnderlineClass = (hashes) => {
     return hashes.includes(activeSection) ? "scale-x-100" : "scale-x-0";
   };
+
+  const toggleMenu = () => setMenuOpen(!menuOpen); // Toggle menu function
 
   return (
     <nav
@@ -63,95 +66,45 @@ const Navbar = () => {
           </h1>
         </a>
 
-        <div className="flex flex-row justify-center items-center gap-8 w-4/12">
-          <a
-            href="#home"
-            className={`font-montserrat relative group cursor-pointer ${getLinkClass(
-              "#home"
-            )}`}
-          >
-            Home
-            <span
-              className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100 ${getUnderlineClass(
-                ["#home", ""]
-              )}`}
-            ></span>
-          </a>
-          <a
-            href="#services"
-            className={`font-montserrat relative group cursor-pointer ${getLinkClass(
-              "#services"
-            )}`}
-          >
-            Services
-            <span
-              className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100  ${getUnderlineClass(
-                ["#services"]
-              )}`}
-            ></span>
-          </a>
-          <a
-            href="#portfolio"
-            className={`font-montserrat relative group cursor-pointer ${getLinkClass(
-              "#portfolio"
-            )}`}
-          >
-            Portfolio
-            <span
-              className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100  ${getUnderlineClass(
-                ["#portfolio"]
-              )}`}
-            ></span>
-          </a>
-          <a
-            href="#ourteam"
-            className={`font-montserrat relative group cursor-pointer ${getLinkClass(
-              "#ourteam"
-            )}`}
-          >
-            Our Team
-            <span
-              className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100 ${getUnderlineClass(
-                ["#ourteam"]
-              )}`}
-            ></span>
-          </a>
+        {/* Hamburger Icon for small screens */}
+        <div className="block sm:hidden">
+          <button onClick={toggleMenu} className="text-white">
+            <AiOutlineMenu size={24} />
+          </button>
         </div>
 
-        <div className="flex flex-row justify-end items-center gap-4 w-4/12">
-          <a
-            href="https://www.tiktok.com/@capstonesolutions?is_from_webapp=1&sender_device=pc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
-          >
-            <FaTiktok size={20} />
-          </a>
-          <a
-            // href=""
-            // target="_blank"
-            // rel="noopener noreferrer"
-            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
-          >
-            <FaTwitter size={20} />
-          </a>
-          <a
-            href="https://www.instagram.com/capstonesolutions24"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
-          >
-            <AiFillInstagram size={20} />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61559731192667"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
-          >
-            <FaFacebookF size={20} />
-          </a>
+        {/* Desktop Navigation (hidden on small screens) */}
+        <div className="hidden sm:flex flex-row justify-center items-center gap-8 w-4/12">
+          {["#home", "#services", "#portfolio", "#ourteam"].map((section) => (
+            <a
+              key={section}
+              href={section}
+              className={`font-montserrat relative group cursor-pointer ${getLinkClass(
+                section
+              )}`}
+            >
+              {section.replace("#", "").charAt(0).toUpperCase() + section.slice(2)}
+              <span
+                className={`rounded block absolute left-1/2 bottom-0 h-0.5 bg-white group-hover:bg-zinc-400 w-full transform -translate-x-1/2 transition-transform duration-300 group-hover:scale-x-100 ${getUnderlineClass(
+                  [section]
+                )}`}
+              ></span>
+            </a>
+          ))}
+        </div>
 
+        {/* Social Icons and Hire Us Button (hidden on small screens) */}
+        <div className="hidden sm:flex flex-row justify-end items-center gap-4 w-4/12">
+          {[
+            { icon: <FaTiktok size={20} />, link: "https://www.tiktok.com/@capstonesolutions?is_from_webapp=1&sender_device=pc" },
+            { icon: <FaTwitter size={20} />, link: "#" },
+            { icon: <AiFillInstagram size={20} />, link: "https://www.instagram.com/capstonesolutions24" },
+            { icon: <FaFacebookF size={20} />, link: "https://www.facebook.com/profile.php?id=61559731192667" },
+          ].map(({ icon, link }) => (
+            <a key={link} href={link} target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+              {icon}
+            </a>
+          ))}
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=capstone.solutions24@gmail.com"
             target="_blank"
@@ -162,6 +115,27 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+
+      {/* Fullscreen Menu for Small Screens */}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex flex-col items-center justify-center z-50">
+          <button onClick={toggleMenu} className="absolute top-5 right-5 text-white">
+            Close
+          </button>
+          <div className="flex flex-col gap-8">
+            {["#home", "#services", "#portfolio", "#ourteam"].map((section) => (
+              <a
+                key={section}
+                href={section}
+                onClick={toggleMenu} // Close menu on link click
+                className={`font-montserrat text-2xl text-white ${getLinkClass(section)}`}
+              >
+                {section.replace("#", "").charAt(0).toUpperCase() + section.slice(2)}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
