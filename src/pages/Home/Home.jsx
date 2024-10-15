@@ -19,6 +19,8 @@ import Mobile from "../../components/Carousel/TeamPoor/TPModalMobile";
 import BlessedLandModal from "../../components/Carousel/BlessedLandAcademyOfTaguig/BlessedLandModal";
 import TUPTSchedulerModal from "../../components/Carousel/TUPT-TScheduler/TUPTSchedulerModal";
 import TPModalWebsite from "../../components/Carousel/TeamPoor/TPModalWebsite";
+import TUPTSchedulerModalMobile from "../../components/Carousel/TUPT-TScheduler/TUPTSchedulerModalMobile";
+import BlessedLandModalMobile from "../../components/Carousel/BlessedLandAcademyOfTaguig/BlessedLandModalMobile";
 
 // CSS for floating animation
 const styles = {
@@ -41,9 +43,21 @@ const Home = () => {
   } = useDisclosure();
 
   const {
+    isOpen: isOpenBlessedLandMobile,
+    onOpen: onOpenBlessedLandMobile,
+    onOpenChange: onOpenChangeBlessedLandMobile,
+  } = useDisclosure();
+
+  const {
     isOpen: isOpenTUPTScheduler,
     onOpen: onOpenTUPTScheduler,
     onOpenChange: onOpenChangeTUPTScheduler,
+  } = useDisclosure();
+
+  const {
+    isOpen: isOpenTUPTSchedulerMobile,
+    onOpen: onOpenTUPTSchedulerMobile,
+    onOpenChange: onOpenChangeTUPTSchedulerMobile,
   } = useDisclosure();
 
   const {
@@ -53,7 +67,7 @@ const Home = () => {
   } = useDisclosure();
 
   return (
-    <div className="relative bg-zinc-950 text-white overflow-hidden p-4 sm:p-18 md:p-8 lg:p-12">
+    <div className="relative bg-zinc-950 text-white overflow-hidden p-4 ">
       {/* Left Circle */}
       <div className="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
@@ -277,6 +291,56 @@ const Home = () => {
             </div>
           </a>
 
+          {/* scheduler Mobile */}
+          <a
+            onClick={onOpenTUPTSchedulerMobile}
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <img src="/images/tupt-scheduler/mobile-1.png" />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Mobile</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">MongoDB</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Express</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">React JS</p>
+                </div>
+
+                <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-red-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">TUPT-T Scheduler</p>
+
+                <p className="font-light text-xs">
+                  The TUP-T Sports and eSports Scheduler is a dynamic platform
+                  designed to streamline the organization and management of
+                  sports and esports events for students and teams. With an
+                  intuitive interface, it allows users to easily create, update,
+                  and manage schedules for various activities, including
+                  tournaments, practices, and matches.
+                </p>
+
+                <TUPTSchedulerModalMobile
+                  isOpen={isOpenTUPTSchedulerMobile}
+                  onOpenChange={onOpenChangeTUPTSchedulerMobile}
+                />
+              </div>
+            </div>
+          </a>
+
           {/* blessed land */}
           <a
             onClick={onOpenBlessedLand}
@@ -322,6 +386,56 @@ const Home = () => {
                 <BlessedLandModal
                   isOpen={isOpenBlessedLand}
                   onOpenChange={onOpenChangeBlessedLand}
+                />
+              </div>
+            </div>
+          </a>
+
+          {/* blessed land mobile */}
+          <a
+            onClick={onOpenBlessedLandMobile}
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <img src="/images/blessed-land/mobile-1.png" />
+
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex flex-row gap-1 flex-wrap">
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Mobile</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">MongoDB</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Express</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">React JS</p>
+                </div>
+
+                <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
+                  <p className="text-[10px] text-yellow-500">Node JS</p>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="font-bold">Blessed Land Academy of Taguig</p>
+
+                <p className="font-light text-xs">
+                  The Blessed Land Academy of Taguig web system is a dynamic
+                  online platform designed to enhance communication and
+                  streamline operations for students, parents, and staff. This
+                  comprehensive system features user-friendly interfaces for
+                  enrollment, class schedules, and academic resources, enabling
+                  easy access to vital information.
+                </p>
+
+                <BlessedLandModalMobile
+                  isOpen={isOpenBlessedLandMobile}
+                  onOpenChange={onOpenChangeBlessedLandMobile}
                 />
               </div>
             </div>

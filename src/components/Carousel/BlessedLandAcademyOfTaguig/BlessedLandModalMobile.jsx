@@ -11,23 +11,13 @@ import {
 // Array of images for the carousel
 const images = [
   {
-    src: "/images/proj-a1.png",
+    src: "/images/blessed-land/mobile-1.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
-  {
-    src: "/images/proj-a2.png",
-    alt: "Image 2",
-    description: "Description for image 2",
-  },
-  {
-    src: "/images/proj-a3.png",
-    alt: "Image 3",
-    description: "Description for image 3",
-  },
 ];
 
-const BlessedLandModal = ({ isOpen, onOpenChange }) => {
+const BlessedLandModalMobile = ({ isOpen, onOpenChange }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -83,7 +73,7 @@ const BlessedLandModal = ({ isOpen, onOpenChange }) => {
           <div className="mt-4 space-y-2">
             <div className="flex flex-row gap-1 flex-wrap">
               <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
-                <p className="text-[10px] text-yellow-500">Website</p>
+                <p className="text-[10px] text-yellow-500">Mobile</p>
               </div>
 
               <div className="bg-yellow-500/10 w-fit px-2 rounded-full flex items-center">
@@ -124,4 +114,4 @@ const BlessedLandModal = ({ isOpen, onOpenChange }) => {
   );
 };
 
-export default BlessedLandModal;
+export default BlessedLandModalMobile;

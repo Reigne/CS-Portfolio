@@ -85,7 +85,7 @@ const TUPTSchedulerModal = ({ isOpen, onOpenChange }) => {
               <div className="mt-4 space-y-2">
                 <div className="flex flex-row gap-1 flex-wrap">
                   <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
-                    <p className="text-[10px] text-red-500">Mobile</p>
+                    <p className="text-[10px] text-red-500">Website</p>
                   </div>
 
                   <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">

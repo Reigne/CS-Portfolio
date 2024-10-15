@@ -11,44 +11,18 @@ import {
 // Array of images for the carousel
 const images = [
   {
-    src: "/images/proj-c1.png",
+    src: "/images/tupt-scheduler/mobile-1.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
   {
-    src: "/images/proj-c2.png",
-    alt: "Image 1",
-    description: "Description for image 1",
+    src: "/images/tupt-scheduler/mobile-2.png",
+    alt: "Image 2",
+    description: "Description for image 2",
   },
-  {
-    src: "/images/proj-c3.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-  {
-    src: "/images/proj-c4.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-  {
-    src: "/images/proj-c5.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-  {
-    src: "/images/proj-c6.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-  {
-    src: "/images/proj-c7.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-
 ];
 
-const TPModalWebsite = ({ isOpen, onOpenChange }) => {
+const TUPTSchedulerModalMobile = ({ isOpen, onOpenChange }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -106,7 +80,7 @@ const TPModalWebsite = ({ isOpen, onOpenChange }) => {
               <div className="mt-4 space-y-2">
                 <div className="flex flex-row gap-1 flex-wrap">
                   <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
-                    <p className="text-[10px] text-red-500">Website</p>
+                    <p className="text-[10px] text-red-500">Mobile</p>
                   </div>
 
                   <div className="bg-red-500/10 w-fit px-2 rounded-full flex items-center">
@@ -126,17 +100,14 @@ const TPModalWebsite = ({ isOpen, onOpenChange }) => {
                   </div>
                 </div>
 
-                <p className="font-bold text-xl">
-                  TEAMPOOR - Motorcycle Parts & Services (Website)
-                </p>
+                <p className="font-bold text-xl">TUPT-T Scheduler</p>
                 <p className="text-sm">
-                  {/* {images[currentImageIndex].description} */}
-                  TeamPoor System for Managing Motorcycle Parts and Services, a
-                  sophisticated web-based and mobile application designed to
-                  transform the management of motorcycle shops. The system aims
-                  to enhance workflow efficiency, minimize manual processes,
-                  boost productivity, and elevate service delivery and customer
-                  satisfaction within the motorcycle shop environment.
+                  The TUP-T Sports and eSports Scheduler is a dynamic platform
+                  designed to streamline the organization and management of
+                  sports and esports events for students and teams. With an
+                  intuitive interface, it allows users to easily create, update,
+                  and manage schedules for various activities, including
+                  tournaments, practices, and matches.
                 </p>
               </div>
             </ModalBody>
@@ -152,4 +123,4 @@ const TPModalWebsite = ({ isOpen, onOpenChange }) => {
   );
 };
 
-export default TPModalWebsite;
+export default TUPTSchedulerModalMobile;
