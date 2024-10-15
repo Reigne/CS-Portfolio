@@ -11,41 +11,53 @@ import {
 // Array of images for the carousel
 const images = [
   {
-    src: "/images/teampoor-mobile/2.png",
+    src: "/images/proj-c1.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
   {
-    src: "/images/teampoor-mobile/3.png",
+    src: "/images/proj-c2.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
   {
-    src: "/images/teampoor-mobile/4.png",
+    src: "/images/proj-c3.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
   {
-    src: "/images/teampoor-mobile/5.png",
+    src: "/images/proj-c4.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
+  {
+    src: "/images/proj-c5.png",
+    alt: "Image 1",
+    description: "Description for image 1",
+  },
+  {
+    src: "/images/proj-c6.png",
+    alt: "Image 1",
+    description: "Description for image 1",
+  },
+  {
+    src: "/images/proj-c7.png",
+    alt: "Image 1",
+    description: "Description for image 1",
+  },
+
 ];
 
-const Mobile = ({ isOpen, onOpenChange }) => {
+const TPModalWebsite = ({ isOpen, onOpenChange }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex + 1) % images.length
-    );
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevImage = () => {
     setCurrentImageIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + images.length) %
-        images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
 
@@ -140,4 +152,4 @@ const Mobile = ({ isOpen, onOpenChange }) => {
   );
 };
 
-export default Mobile;
+export default TPModalWebsite;

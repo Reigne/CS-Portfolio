@@ -11,41 +11,32 @@ import {
 // Array of images for the carousel
 const images = [
   {
-    src: "/images/teampoor-mobile/2.png",
+    src: "/images/proj-b1.png",
     alt: "Image 1",
     description: "Description for image 1",
   },
   {
-    src: "/images/teampoor-mobile/3.png",
-    alt: "Image 1",
-    description: "Description for image 1",
+    src: "/images/proj-b2.jpg",
+    alt: "Image 2",
+    description: "Description for image 2",
   },
-  {
-    src: "/images/teampoor-mobile/4.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
-  {
-    src: "/images/teampoor-mobile/5.png",
-    alt: "Image 1",
-    description: "Description for image 1",
-  },
+  // {
+  //   src: "/images/proj-b3.png",
+  //   alt: "Image 3",
+  //   description: "Description for image 3",
+  // },
 ];
 
-const Mobile = ({ isOpen, onOpenChange }) => {
+const TUPTSchedulerModal = ({ isOpen, onOpenChange }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex + 1) % images.length
-    );
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevImage = () => {
     setCurrentImageIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + images.length) %
-        images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
 
@@ -114,17 +105,12 @@ const Mobile = ({ isOpen, onOpenChange }) => {
                   </div>
                 </div>
 
-                <p className="font-bold text-xl">
-                  TEAMPOOR - Motorcycle Parts & Services
-                </p>
+                <p className="font-bold text-xl">TUPT-T Scheduler</p>
                 <p className="text-sm">
-                  {/* {images[currentImageIndex].description} */}
-                  TeamPoor System for Managing Motorcycle Parts and Services, a
-                  sophisticated web-based and mobile application designed to
-                  transform the management of motorcycle shops. The system aims
-                  to enhance workflow efficiency, minimize manual processes,
-                  boost productivity, and elevate service delivery and customer
-                  satisfaction within the motorcycle shop environment.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </div>
             </ModalBody>
@@ -140,4 +126,4 @@ const Mobile = ({ isOpen, onOpenChange }) => {
   );
 };
 
-export default Mobile;
+export default TUPTSchedulerModal;
