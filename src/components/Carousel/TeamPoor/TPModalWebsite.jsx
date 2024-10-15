@@ -127,7 +127,7 @@ const TPModalWebsite = ({ isOpen, onOpenChange }) => {
                 </div>
 
                 <p className="font-bold text-xl">
-                  TEAMPOOR - Motorcycle Parts & Services
+                  TEAMPOOR - Motorcycle Parts & Services (Website)
                 </p>
                 <p className="text-sm">
                   {/* {images[currentImageIndex].description} */}

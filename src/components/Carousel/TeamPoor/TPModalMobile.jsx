@@ -115,7 +115,7 @@ const Mobile = ({ isOpen, onOpenChange }) => {
                 </div>
 
                 <p className="font-bold text-xl">
-                  TEAMPOOR - Motorcycle Parts & Services
+                  TEAMPOOR - Motorcycle Parts & Services (Mobile App)
                 </p>
                 <p className="text-sm">
                   {/* {images[currentImageIndex].description} */}

@@ -328,7 +328,7 @@ const Home = () => {
 
               <div className="space-y-1">
                 <p className="font-bold">
-                  TEAMPOOR - Motorcycle Parts & Services
+                  TEAMPOOR - Motorcycle Parts & Services (Website)
                 </p>
 
                 <p className="font-light text-xs">
@@ -386,7 +386,7 @@ const Home = () => {
 
               <div className="space-y-1">
                 <p className="font-bold">
-                  TEAMPOOR - Motorcycle Parts & Services
+                  TEAMPOOR - Motorcycle Parts & Services (Mobile App)
                 </p>
 
                 <p className="font-light text-xs">
