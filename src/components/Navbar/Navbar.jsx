@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa6";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -111,10 +115,48 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="flex flex-row justify-end w-4/12">
-          <div className="border rounded-full border-zinc-700 px-8 py-2">
+        <div className="flex flex-row justify-end items-center gap-4 w-4/12">
+          <a
+            href="https://www.tiktok.com/@capstonesolutions?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <FaTiktok size={20} />
+          </a>
+          <a
+            // href=""
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <FaTwitter size={20} />
+          </a>
+          <a
+            href="https://www.instagram.com/capstonesolutions24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <AiFillInstagram size={20} />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61559731192667"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <FaFacebookF size={20} />
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=capstone.solutions24@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border rounded-full border-zinc-700 px-8 py-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
             <p className="font-montserrat">Hire Us</p>
-          </div>
+          </a>
         </div>
       </div>
     </nav>
