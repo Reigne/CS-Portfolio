@@ -48,7 +48,10 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-row justify-between items-center py-5">
-        <div className="flex flex-row justify-start items-center gap-4 w-4/12">
+        <a
+          href="#home"
+          className="flex flex-row justify-start items-center gap-4 w-4/12"
+        >
           <img
             src="/images/logo.jpg"
             height={40}
@@ -58,7 +61,7 @@ const Navbar = () => {
           <h1 className="font-montserrat font-bold text-lg">
             Capstone Solutions
           </h1>
-        </div>
+        </a>
 
         <div className="flex flex-row justify-center items-center gap-8 w-4/12">
           <a
