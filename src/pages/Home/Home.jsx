@@ -16,6 +16,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import Mobile from "../../components/Carousel/TeamPoor/TPModalMobile";
+import BlessedLandModal from "../../components/Carousel/BlessedLandAcademyOfTaguig/BlessedLandModal";
+import TUPTSchedulerModal from "../../components/Carousel/TUPT-TScheduler/TUPTSchedulerModal";
+import TPModalWebsite from "../../components/Carousel/TeamPoor/TPModalWebsite";
 
 // CSS for floating animation
 const styles = {
@@ -25,7 +28,29 @@ const styles = {
 };
 
 const Home = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const {
+    isOpen: isOpenMobile,
+    onOpen: onOpenMobile,
+    onOpenChange: onOpenChangeMobile,
+  } = useDisclosure();
+
+  const {
+    isOpen: isOpenBlessedLand,
+    onOpen: onOpenBlessedLand,
+    onOpenChange: onOpenChangeBlessedLand,
+  } = useDisclosure();
+
+  const {
+    isOpen: isOpenTUPTScheduler,
+    onOpen: onOpenTUPTScheduler,
+    onOpenChange: onOpenChangeTUPTScheduler,
+  } = useDisclosure();
+
+  const {
+    isOpen: isOpenTeamPoorWebsite,
+    onOpen: onOpenTeamPoorWebsite,
+    onOpenChange: onOpenChangeTeamPoorWebsite,
+  } = useDisclosure();
 
   return (
     <div className="relative bg-zinc-950 text-white overflow-hidden">
@@ -35,7 +60,7 @@ const Home = () => {
       {/* Right Circle */}
       <div className="absolute bottom-[500px] right-[-100px] w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-3xl"></div>
 
-      <div className="min-h-screen overflow-hidden flex flex-col">
+      <div id="home" className="min-h-screen overflow-hidden flex flex-col">
         {/* Star Circles */}
         {Array.from({ length: 50 }).map((_, index) => (
           <div
@@ -112,7 +137,10 @@ const Home = () => {
       </div>
 
       {/* services */}
-      <div className="flex flex-col gap-12 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+      <div
+        id="services"
+        className="flex flex-col gap-12 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48"
+      >
         <div className="flex flex-row ">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● SERVICES ●</p>
@@ -153,8 +181,11 @@ const Home = () => {
         </div>
       </div>
 
-      {/* projects */}
-      <div className="flex flex-col gap-8 mt-40 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+      {/* portfolio */}
+      <div
+        id="portfolio"
+        className="flex flex-col gap-8 mt-40 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48"
+      >
         <div className="flex flex-row">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● PORTFOLIO ●</p>
@@ -170,7 +201,10 @@ const Home = () => {
 
         <div className="grid grid-cols-3 gap-4  font-montserrat">
           {/* scheduler */}
-          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+          <a
+            onClick={onOpenTUPTScheduler}
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
             <img src="/images/proj-b2.jpg" />
 
             <div className="p-4 flex flex-col gap-3">
@@ -205,12 +239,20 @@ const Home = () => {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+
+                <TUPTSchedulerModal
+                  isOpen={isOpenTUPTScheduler}
+                  onOpenChange={onOpenChangeTUPTScheduler}
+                />
               </div>
             </div>
-          </div>
+          </a>
 
           {/* blessed land */}
-          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+          <a
+            onClick={onOpenBlessedLand}
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
             <img src="/images/proj-a1.png" />
 
             <div className="p-4 flex flex-col gap-3">
@@ -245,12 +287,20 @@ const Home = () => {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+
+                <BlessedLandModal
+                  isOpen={isOpenBlessedLand}
+                  onOpenChange={onOpenChangeBlessedLand}
+                />
               </div>
             </div>
-          </div>
+          </a>
 
           {/* web teampoor */}
-          <div className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300">
+          <a
+            onClick={onOpenTeamPoorWebsite}
+            className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
             <img src="/images/proj-c1.png" />
 
             <div className="p-4 flex flex-col gap-3">
@@ -289,14 +339,19 @@ const Home = () => {
                   boost productivity, and elevate service delivery and customer
                   satisfaction within the motorcycle shop environment.
                 </p>
+
+                <TPModalWebsite
+                  isOpen={isOpenTeamPoorWebsite}
+                  onOpenChange={onOpenChangeTeamPoorWebsite}
+                />
               </div>
             </div>
-          </div>
+          </a>
 
-          {/* web teampoor */}
+          {/* mobile teampoor */}
           <a
             className="flex flex-col bg-zinc-900 overflow-hidden rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
-            onClick={onOpen}
+            onClick={onOpenMobile}
           >
             {/* <img src="/images/proj-d1.png" /> */}
 
@@ -343,7 +398,10 @@ const Home = () => {
                   satisfaction within the motorcycle shop environment.
                 </p>
 
-                <Mobile isOpen={isOpen} onOpenChange={onOpenChange} />
+                <Mobile
+                  isOpen={isOpenMobile}
+                  onOpenChange={onOpenChangeMobile}
+                />
               </div>
             </div>
           </a>
@@ -351,7 +409,10 @@ const Home = () => {
       </div>
 
       {/* teams */}
-      <div className="flex flex-col gap-8 mt-32 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48">
+      <div
+        id="ourteam"
+        className="flex flex-col gap-8 mt-32 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48"
+      >
         <div className="flex flex-row">
           <div className="flex flex-col gap-2 font-montserrat">
             <p className="font-bold">● TEAMS ●</p>
