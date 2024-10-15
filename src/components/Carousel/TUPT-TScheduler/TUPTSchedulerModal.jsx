@@ -107,10 +107,12 @@ const TUPTSchedulerModal = ({ isOpen, onOpenChange }) => {
 
                 <p className="font-bold text-xl">TUPT-T Scheduler</p>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  The TUP-T Sports and eSports Scheduler is a dynamic platform
+                  designed to streamline the organization and management of
+                  sports and esports events for students and teams. With an
+                  intuitive interface, it allows users to easily create, update,
+                  and manage schedules for various activities, including
+                  tournaments, practices, and matches.
                 </p>
               </div>
             </ModalBody>
