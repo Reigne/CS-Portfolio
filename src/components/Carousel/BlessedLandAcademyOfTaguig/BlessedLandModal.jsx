@@ -42,7 +42,7 @@ const BlessedLandModal = ({ isOpen, onOpenChange }) => {
 
   return (
     <Modal
-      size="4xl"
+      size="5xl"
       backdrop="opaque"
       isOpen={isOpen}
       onOpenChange={onOpenChange}
