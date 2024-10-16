@@ -12,6 +12,15 @@ export default {
       fontFamily: {
         montserrat: ['"Montserrat"', "sans-serif"],
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-113%)" }, // Move to the left by 50% of the container
+        },
+      },
+      animation: {
+        marquee: "marquee 20s linear infinite", // Adjust speed if necessary
+      },
     },
   },
   darkMode: "class",

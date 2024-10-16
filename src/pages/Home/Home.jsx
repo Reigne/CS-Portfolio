@@ -373,7 +373,9 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">Blessed Land Academy of Taguig (Website)</p>
+                <p className="font-bold">
+                  Blessed Land Academy of Taguig (Website)
+                </p>
 
                 <p className="font-light text-xs">
                   The Blessed Land Academy of Taguig web system is a dynamic
@@ -423,7 +425,9 @@ const Home = () => {
               </div>
 
               <div className="space-y-1">
-                <p className="font-bold">Blessed Land Academy of Taguig (Mobile App)</p>
+                <p className="font-bold">
+                  Blessed Land Academy of Taguig (Mobile App)
+                </p>
 
                 <p className="font-light text-xs">
                   The Blessed Land Academy of Taguig web system is a dynamic
@@ -551,6 +555,161 @@ const Home = () => {
               </div>
             </div>
           </a>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <div
+          id="skills"
+          className="flex flex-col gap-8 mt-32 px-10 sm:px-20 md:px-32 lg:px-40 xl:px-48"
+        >
+          <div className="flex flex-row">
+            <div className="flex flex-col gap-2 font-montserrat">
+              <p className="font-bold">● SKILLS ●</p>
+
+              <p className="font-extrabold text-4xl">Our Technology Stack</p>
+
+              <p className="font-light">
+                Tools and programming languages we utilize.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 bg-zinc-950 overflow-hidden">
+          <div className="flex items-center gap-32 p-8 space-x-8 animate-marquee hover:pause-marquee">
+            {/* First set of logos */}
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/MongoDB-white.png"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/express.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/reactjs.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/nodejs.png"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/tailwindcss-white.svg"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/laravel.png"
+              width={250}
+            />
+
+            {/* Duplicate logos for seamless scrolling */}
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/MongoDB-white.png"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/express.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/reactjs.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/nodejs.png"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/tailwindcss-white.svg"
+              width={250}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/tools/laravel.png"
+              width={250}
+            />
+          </div>
+        </div>
+
+        {/* languages */}
+        <div className="flex flex-col gap-4 bg-zinc-950 overflow-hidden">
+          <div className="flex items-center gap-52 p-8 space-x-8 animate-marquee hover:pause-marquee">
+            {/* First set of logos */}
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/php.png"
+              width={110}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/html.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/javascript.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/css.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/typescript.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/python.png"
+              width={80}
+            />
+
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/php.png"
+              width={110}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/html.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/javascript.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/css.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/typescript.png"
+              width={80}
+            />
+            <img
+              className="grayscale hover:grayscale-0"
+              src="/images/languages/python.png"
+              width={80}
+            />
+          </div>
         </div>
       </div>
 

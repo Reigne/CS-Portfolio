@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add this to global.css or a separate CSS file */
+@layer utilities {
+    .pause-marquee {
+      animation-play-state: paused;
+    }
+  }
+  
