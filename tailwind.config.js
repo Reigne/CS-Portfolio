@@ -19,7 +19,7 @@ export default {
         },
       },
       animation: {
-        marquee: "marquee 20s linear infinite", // Adjust speed if necessary
+        marquee: "marquee 30s linear infinite", // Adjust speed if necessary
       },
     },
   },
