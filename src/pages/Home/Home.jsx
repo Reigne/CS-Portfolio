@@ -826,7 +826,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
-            <img src="/images/teams/formal-nov.jpg" className="rounded-full" />
+            <img src="/images/teams/formal-nov.JPG" className="rounded-full" />
             <div className="flex flex-col justify-center items-center space-y-1">
               <p className="text-md text-zinc-500">Website Developer</p>
               <p className="font-bold">NOVEMGER PASCUA</p>
