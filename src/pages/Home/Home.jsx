@@ -770,16 +770,16 @@ const Home = () => {
 
         </div> */}
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 font-montserrat">
-          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
-            <img src="/images/teams/reigne.jpg" className="rounded-full" />
-
+        <div className="flex flex-wrap justify-center gap-4 font-montserrat">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
+            <img
+              src="/images/teams/formal-reigne.JPG"
+              className="rounded-full"
+            />
             <div className="flex flex-col justify-center items-center space-y-1">
               <p className="text-md text-zinc-500">Mobile Developer</p>
-
               <p className="font-bold">ELIJA REIGNE MONTERONA</p>
             </div>
-
             <a
               href="https://github.com/Reigne"
               target="_blank"
@@ -788,14 +788,16 @@ const Home = () => {
               <FaGithub size={24} color="#71717a" />
             </a>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
-            <img src="/images/teams/frans.jpg" className="rounded-full" />
 
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
+            <img
+              src="/images/teams/formal-frans.JPG"
+              className="rounded-full"
+            />
             <div className="flex flex-col justify-center items-center space-y-1">
               <p className="text-md text-zinc-500">Mobile Developer</p>
               <p className="font-bold">FRANS ADRYHEL MANLANGIT</p>
             </div>
-
             <a
               href="https://github.com/FransManlangit"
               target="_blank"
@@ -804,14 +806,16 @@ const Home = () => {
               <FaGithub size={24} color="#71717a" />
             </a>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
-            <img src="/images/teams/daniel.jpg" className="rounded-full" />
 
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
+            <img
+              src="/images/teams/formal-daniel.JPG"
+              className="rounded-full"
+            />
             <div className="flex flex-col justify-center items-center space-y-1">
               <p className="text-md text-zinc-500">Website Developer</p>
               <p className="font-bold">DANIEL ANGELO RODRIGUEZ</p>
             </div>
-
             <a
               href="https://github.com/d4Nc0D31902"
               target="_blank"
@@ -820,16 +824,30 @@ const Home = () => {
               <FaGithub size={24} color="#71717a" />
             </a>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8">
-            <img src="/images/teams/novemger.jpg" className="rounded-full" />
 
-            <div className="flex flex-col justify-center items-center  space-y-1">
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
+            <img src="/images/teams/formal-nov.jpg" className="rounded-full" />
+            <div className="flex flex-col justify-center items-center space-y-1">
               <p className="text-md text-zinc-500">Website Developer</p>
               <p className="font-bold">NOVEMGER PASCUA</p>
             </div>
-
             <a
               href="https://github.com/XdebronneX"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} color="#71717a" />
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-3 rounded overflow-hidden hover:scale-105 transition-transform duration-300 p-8 basis-full sm:basis-1/2 lg:basis-1/4">
+            <img src="/images/teams/formal-ian.JPG" className="rounded-full" />
+            <div className="flex flex-col justify-center items-center space-y-1">
+              <p className="text-md text-zinc-500">Website Developer</p>
+              <p className="font-bold">IAN KHENN MAGAT</p>
+            </div>
+            <a
+              href="https://github.com/WatchingDino"
               target="_blank"
               rel="noopener noreferrer"
             >
